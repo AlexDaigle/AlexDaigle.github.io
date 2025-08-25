@@ -48,8 +48,9 @@ main{
     padding: 10px;
 }
 .sidebar-img{
-    width: 200px;
-    height: 160px;
+    width: 250px;
+    height: 200px;
+    margin-top: 50px;
 }
 .content{
     flex: 1;
