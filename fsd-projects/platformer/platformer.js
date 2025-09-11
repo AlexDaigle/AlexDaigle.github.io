@@ -46,14 +46,18 @@ createPlatform(1300, 250, 100, 10, "grey")
 
     // TODO 3 - Create Collectables
 createCollectable("heart", 130, 480, .03, 1 )
-createCollectable("heart", 1030, 450, .03, 1 )
+createCollectable("open", 1030, 450, .03, 1 )
 createCollectable("heart", 530, 200, .03, 1)
-createCollectable("database", 1330, 200, .03, 1)
+createCollectable("orb", 1330, 200, .005, 1)
     
     // TODO 4 - Create Cannons
-createCannon("top", 500, 1400)
+createCannon("left", 150, 3500)
 createCannon("bottom", 800, 2000,)
 createCannon("top", 1300, 1500)
+
+//level 2 data
+let currentLevelIndex= 1
+let currentLevel= levels[currentLevelIndex]
     
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
