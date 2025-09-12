@@ -29,35 +29,32 @@ $(function () {
     // TODO 1 - Enable the Grid
     //toggleGrid();
     // TODO 2 - Create Platforms
-createPlatform(260, 640, 100, 10, "grey")
-createPlatform(50, 0, 0.1, 600, "black")
-createPlatform(100, 0, 0.1, 600, "black")
-createPlatform(100, 530, 100, 10, "grey")
-createPlatform(500, 580, 100, 10, "grey")
-createPlatform(700, 500, 100, 10, "grey")
-createPlatform(1000,500, 100, 10, "grey")
-createPlatform(500, 400, 100, 10, "grey")
-createPlatform(300, 330, 50, 10, "grey")
-createPlatform(500, 250, 100, 10, "grey")
-createPlatform(700, 250, 100, 10, "grey")
-createPlatform(900, 250, 100, 10, "grey")
-createPlatform(1100, 250, 100, 10, "grey")
-createPlatform(1300, 250, 100, 10, "grey")
+createPlatform(260, 640, 100, 10, "grey");
+createPlatform(50, 0, 0.1, 600, "black");
+createPlatform(100, 0, 0.1, 600, "black");
+createPlatform(100, 530, 100, 10, "grey");
+createPlatform(500, 580, 100, 10, "grey");
+createPlatform(700, 500, 100, 10, "grey");
+createPlatform(1000,500, 100, 10, "grey");
+createPlatform(500, 400, 100, 10, "grey");
+createPlatform(300, 330, 50, 10, "grey");
+createPlatform(500, 250, 100, 10, "grey");
+createPlatform(700, 250, 100, 10, "grey");
+createPlatform(900, 250, 100, 10, "grey");
+createPlatform(1100, 250, 100, 10, "grey");
+createPlatform(1300, 250, 100, 10, "grey");
 
     // TODO 3 - Create Collectables
-createCollectable("heart", 130, 480, .03, 1 )
-createCollectable("open", 1030, 450, .03, 1 )
-createCollectable("heart", 530, 200, .03, 1)
-createCollectable("orb", 1330, 200, .005, 1)
+createCollectable("heart", 130, 480, .03, 1);
+createCollectable("open", 1030, 450, .03, 1);
+createCollectable("heart", 530, 200, .03, 1);
+createCollectable("orb", 1330, 200, .005, 1);
     
     // TODO 4 - Create Cannons
-createCannon("left", 150, 3500)
-createCannon("bottom", 800, 2000,)
-createCannon("top", 1300, 1500)
+createCannon("left", 150, 3500);
+createCannon("bottom", 800, 2000,);
+createCannon("top", 1300, 1500);
 
-//level 2 data
-let currentLevelIndex= 1
-let currentLevel= levels[currentLevelIndex]
     
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //

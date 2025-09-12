@@ -100,5 +100,5 @@ var collectableList = {
   steve: { image: "images/collectables/steve-head.png" },
   heart:{image:"images/collectables/heart1.png"},
   open:{image:"images/collectables/key.png"},
-  orb:{image:"images/collectables/orb.png"}
+  orb:{image:"images/collectables/orb2.png"}
 };
