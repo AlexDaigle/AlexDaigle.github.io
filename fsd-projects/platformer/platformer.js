@@ -54,7 +54,6 @@ createCollectable("orb", 1330, 200, .005, 1);
 createCannon("left", 150, 3500);
 createCannon("bottom", 800, 2000,);
 createCannon("top", 1300, 1500);
-
     
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
