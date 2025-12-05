@@ -36,7 +36,7 @@ var init = function (window) {
         //drawCircle();
         //drawCircle();
         // TODO 7 : Use a loop to create multiple circles
-        for(var i = 0; i < 500; i++){
+        for(var i = 0; i < 1000; i++){
             drawCircle();
         }
 
@@ -84,7 +84,7 @@ var init = function (window) {
             var bottom = circle.y - circle.radius
             var left = circle.x + circle.radius
             var right = circle.x - circle.radius
-            
+            // smooth circle variables above
             
             if ( right > canvas.width ) {
                 circle.x = 0;
