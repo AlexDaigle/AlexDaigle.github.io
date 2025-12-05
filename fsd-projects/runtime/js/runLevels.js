@@ -18,17 +18,83 @@ var runLevels = function (window) {
 
     // TODOs 5 through 11 go here
     // BEGIN EDITING YOUR CODE HERE
+   function createSawBlade(x, y){
     var hitZoneSize = 25;
     var damageFromObstcale = 10;
     var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstcale);
-    sawBladeHitZone.x = 600;
-    sawBladeHitZone.y = 300;
+    sawBladeHitZone.x = x;
+    sawBladeHitZone.y = y;
     game.addGameItem(sawBladeHitZone);
     var obstcaleImage = draw.bitmap("img/sawblade.png");
     sawBladeHitZone.addChild(obstcaleImage);
     obstcaleImage.x = -25;
     obstcaleImage.y = -25;
+   };
+   createSawBlade(600, 370);
+   createSawBlade(900, 370);
+   createSawBlade(1200, 250);
+  function createEnemy(x, y){
+   var enemy = game.createGameItem("enemy", 25);
+   var redSquare = draw.rect(50, 50, "red");
+   redSquare.x = -25;
+   redSquare.y = -25;
+   enemy.addChild(redSquare);
+   enemy.x = x;
+   enemy.y = groundY - y;
+   enemy.velocityX = -3
+   enemy.rotationalVelocity = -30
+   game.addGameItem(enemy);
+  enemy.onPlayerCollision = function(){
+    game.changeIntegrity(-10)
+  }
+  enemy.onProjectileCollision = function(){
+    game.increaseScore(100);
+    enemy.fadeOut();
+  }
+}
+createEnemy(900, 50);
+createEnemy(500, 50);
+createEnemy(700, 50);
 
+function createReward(x, y){
+  var reward = game.createGameItem("reward", 25);
+  var greenSquare = draw.rect(50, 50, "green");
+  greenSquare.x = -25;
+  greenSquare.y = -25;
+  reward.addChild(greenSquare);
+  reward.x = x;
+  reward.y = groundY - y
+  reward.velocityX = -1
+  game.addGameItem(reward);
+  reward.onPlayerCollision = function(){
+  game.changeIntegrity(25)
+  reward.fadeOut();
+  };
+  reward.onProjectileCollision = function(){
+    reward.fadeOut()
+  }
+}
+createReward(1500, 73);
+
+function createMarker(x, y){
+  var marker = game.createGameItem("marker", 25);
+  var blueSquare = draw.rect(50, 50, "blue");
+  blueSquare.x = -25
+  blueSquare.y = -25
+  marker.addChild(blueSquare)
+  marker.x = x
+  marker.y = groundY - y
+  marker.velocityX = -0.5
+  game.addGameItem(marker);
+  marker.onPlayerCollision = function(){
+    startLevel()
+  }
+  marker.onProjectileCollision = function(){
+    startLevel();
+    marker.fadeOut();
+  }
+}
+createMarker(1700, 75);
     function startLevel() {
       // TODO 13 goes below here
 
