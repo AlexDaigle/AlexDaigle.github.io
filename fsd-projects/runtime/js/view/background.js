@@ -86,7 +86,7 @@ if (tree.x < -210){tree.x = 730
       // TODO 4: Part 2 - Parallax
       for(var i = 0; i < buildings.length; i++){
        var build = buildings[i]
-       build.x -= 0.5;
+       build.x -= 0.2;
        if(build.x < -210){build.x = 730}
 }
 

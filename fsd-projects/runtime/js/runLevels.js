@@ -84,7 +84,7 @@ function createMarker(x, y){
   marker.addChild(blueSquare)
   marker.x = x
   marker.y = groundY - y
-  marker.velocityX = -0.5
+  marker.velocityX = -.9
   game.addGameItem(marker);
   marker.onPlayerCollision = function(){
     startLevel()
