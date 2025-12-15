@@ -25,14 +25,18 @@ var runLevels = function (window) {
     sawBladeHitZone.x = x;
     sawBladeHitZone.y = y;
     game.addGameItem(sawBladeHitZone);
-    var obstcaleImage = draw.bitmap("img/sawblade.png");
+    var obstcaleImage = draw.bitmap("img/sawbladeA.png");
     sawBladeHitZone.addChild(obstcaleImage);
-    obstcaleImage.x = -25;
-    obstcaleImage.y = -25;
+    obstcaleImage.x = -30;
+    obstcaleImage.y = -30;
+    obstcaleImage.scaleX = 0.5
+    obstcaleImage.scaleY = 0.5
    };
    createSawBlade(600, 370);
    createSawBlade(900, 370);
-   createSawBlade(1200, 250);
+   createSawBlade(1200, 370);
+
+
   function createEnemy(x, y){
    var enemy = game.createGameItem("enemy", 25);
    var redSquare = draw.rect(50, 50, "red");
@@ -72,6 +76,7 @@ function createReward(x, y){
   };
   reward.onProjectileCollision = function(){
     reward.fadeOut()
+    game.changeIntegrity(25)
   }
 }
 createReward(1500, 73);
@@ -98,7 +103,13 @@ createMarker(1700, 75);
     function startLevel() {
       // TODO 13 goes below here
       var level = levelData[currentLevel];
-      var levelObjects = level[gameItems];
+      var levelObjects = level["gameItems"];
+      for(var i = 0; i < levelObjects.length; i++){
+        createSawBlade()
+        createEnemy()
+        createReward()
+        createMarker()
+      }
       //////////////////////////////////////////////
       // DO NOT EDIT CODE BELOW HERE
       //////////////////////////////////////////////
