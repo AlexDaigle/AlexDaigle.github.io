@@ -97,7 +97,8 @@ function createMarker(x, y){
 createMarker(1700, 75);
     function startLevel() {
       // TODO 13 goes below here
-
+      var level = levelData[currentLevel];
+      var levelObjects = level[gameItems];
       //////////////////////////////////////////////
       // DO NOT EDIT CODE BELOW HERE
       //////////////////////////////////////////////

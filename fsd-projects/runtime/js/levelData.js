@@ -40,6 +40,21 @@ var makeLevelData = function (window) {
           { type: "marker", x: 1700, y: 75} 
         ],
       },
+      {
+        name: "level three",
+        number: 3,
+        speed: -3,
+        gameItems: [
+          { type: "sawblade", x: 400, y: groundY },
+          { type: "sawblade", x: 600, y: groundY },
+          { type: "sawblade", x: 900, y: groundY },
+          { type: "enemie", x: 900, y: 50},
+          { type: "enemie", x: 500, y: 50},
+          { type: "enemie", x: 700, y: 50},
+          { type: "reward", x: 1500, y: 73},
+          { type: "marker", x: 1700, y: 75} 
+        ],
+      },
     ];
     window.opspark.levelData = levelData;
   };
