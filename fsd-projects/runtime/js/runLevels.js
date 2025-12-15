@@ -99,7 +99,7 @@ function createMarker(x, y){
     marker.fadeOut();
   }
 }
-createMarker(1700, 75);
+createMarker(1700, 73);
     function startLevel() {
       // TODO 13 goes below here
       var level = levelData[currentLevel];
