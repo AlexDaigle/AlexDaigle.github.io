@@ -105,10 +105,10 @@ createMarker(1700, 73);
       var level = levelData[currentLevel];
       var levelObjects = level["gameItems"];
       for(var i = 0; i < levelObjects.length; i++){
-        createSawBlade()
-        createEnemy()
-        createReward()
-        createMarker()
+        var item = levelObjects[i]
+        createSawBlade(1200, 370)
+        createEnemy(1200, 50)
+        createReward(1700, 60)
       }
       //////////////////////////////////////////////
       // DO NOT EDIT CODE BELOW HERE
