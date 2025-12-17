@@ -21,7 +21,7 @@ var makeLevelData = function (window) {
           { type: "enemy", x: 900, y: 50},
           { type: "enemy", x: 500, y: 50},
           { type: "enemy", x: 700, y: 50},
-          { type: "reward", x: 1500, y: 75},
+          { type: "reward", x: 1500, y: 73},
           { type: "marker", x: 1700, y: 75} 
         ],
       },

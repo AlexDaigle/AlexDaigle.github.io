@@ -108,7 +108,19 @@ createMarker(1700, 73);
         var eachObject = levelObjects[i]
         eachObject.x
         eachObject.y
-        
+        if(eachObject.type === "sawblade")
+          {createSawBlade(sawblade.x, sawblade.y);
+
+          elseif(eachObject.type === "enemy")
+           {createEnemy(enemy.x, enemy.y)};
+
+          elseif(eachObject.type === "marker")
+           {createMarker(marker.x, marker.y);
+            
+          elseif(eachObject.type === "reward")
+            {createReward(reward.x, reward.y)};
+        }
+        }
       }
       //////////////////////////////////////////////
       // DO NOT EDIT CODE BELOW HERE
