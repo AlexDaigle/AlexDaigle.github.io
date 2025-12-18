@@ -106,20 +106,23 @@ createMarker(1700, 73);
       var levelObjects = level.gameItems;
       for(var i = 0; i < levelObjects.length; i++){
         var eachObject = levelObjects[i]
-        if(eachObject.type === "sawblade")
-          {createSawBlade(eachObject.x, eachObject.y)};
+        if(eachObject.type === "sawblade"){
+          createSawBlade(eachObject.x, eachObject.y)
+          };
 
-          elseif(eachObject.type === "enemy")
-           {createEnemy(eachObject.x, eachObject.y)};
+          elseif(eachObject.type === "enemy"){
+            createEnemy(eachObject.x, eachObject.y)
+          }
+           
+          elseif(eachObject.type === "marker"){
+           createMarker(eachObject.x, eachObject.y)
+           };
 
-          elseif(eachObject.type === "marker")
-           {createMarker(eachObject.x, eachObject.y)};
-
-          elseif(eachObject.type === "reward")
-            {createReward(eachObject.x, eachObject.y)};
-        }
-        }
+          elseif(eachObject.type === "reward"){
+            createReward(eachObject.x, eachObject.y)
+          };
       }
+    }
       //////////////////////////////////////////////
       // DO NOT EDIT CODE BELOW HERE
       //////////////////////////////////////////////
