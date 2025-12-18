@@ -106,23 +106,21 @@ createMarker(1700, 73);
       var levelObjects = level.gameItems;
       for(var i = 0; i < levelObjects.length; i++){
         var eachObject = levelObjects[i]
-        if(eachObject.type === "sawblade"){
-          createSawBlade(eachObject.x, eachObject.y)
-          };
-
-          elseif(eachObject.type === "enemy"){
-            createEnemy(eachObject.x, eachObject.y)
-          }
-           
-          elseif(eachObject.type === "marker"){
-           createMarker(eachObject.x, eachObject.y)
-           };
-
-          elseif(eachObject.type === "reward"){
-            createReward(eachObject.x, eachObject.y)
-          };
-      }
-    }
+        for (var i = 0; i < levelObjects.length; i++) {
+        var eachObject = levelObjects[i];
+        if (eachObject.type === "sawblade") {
+        createSawBlade(eachObject.x, eachObject.y);
+         } 
+         else if (eachObject.type === "enemy"){
+         createEnemy(eachObject.x, eachObject.y);
+         } 
+         else if (eachObject.type === "marker"){
+         createMarker(eachObject.x, eachObject.y);
+         } 
+         else if (eachObject.type === "reward"){
+          createReward(eachObject.x, eachObject.y);
+         }
+        }
       //////////////////////////////////////////////
       // DO NOT EDIT CODE BELOW HERE
       //////////////////////////////////////////////
@@ -135,12 +133,12 @@ createMarker(1700, 73);
     startLevel();
   };
 };
-
+}
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
-if (
+if(
   typeof process !== "undefined" &&
   typeof process.versions.node !== "undefined"
-) {
+ ){
   // here, export any references you need for tests //
   module.exports = runLevels;
 }
